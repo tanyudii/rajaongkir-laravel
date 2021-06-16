@@ -1,0 +1,41 @@
+{
+    "name": "tanyudii/rajaongkir-laravel",
+    "description": "The wrapper rajaongkir api for Laravel PHP Framework",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Yudi Hertanto",
+            "email": "y.hertanto17@gmail.com"
+        }
+    ],
+    "require": {
+        "ext-curl": "*",
+        "ext-json": "*",
+        "php": "^7.3|^8.0",
+        "illuminate/support": "^8"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tanyudii\\RajaOngkirLaravel\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tanyudii\\RajaOngkirLaravel\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Tanyudii\\RajaOngkirLaravel\\RajaOngkirLaravelServiceProvider"
+            ],
+            "aliases": {}
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
