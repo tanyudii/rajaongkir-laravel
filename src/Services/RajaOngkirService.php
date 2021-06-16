@@ -2,7 +2,6 @@
 
 namespace Tanyudii\RajaOngkirLaravel\Services;
 
-use App\Models\Setting;
 use Exception;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
