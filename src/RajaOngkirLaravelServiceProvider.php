@@ -14,12 +14,11 @@ class RajaOngkirLaravelServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->alias('rajaongkir-laravel', RajaOngkirService::class);
-        $this->app->singleton('rajaongkir-laravel', function () {
+        $this->mergeConfigFrom(__DIR__ . "/../config/rajaongkir-laravel.php", "rajaongkir-laravel");
+
+        $this->app->bind("rajaongkir-service", function () {
             return new RajaOngkirService;
         });
-
-        $this->registerPublishing();
     }
 
     /**
@@ -29,21 +28,15 @@ class RajaOngkirLaravelServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
-    }
-
-    /**
-     * Register the package's publishable resources.
-     *
-     * @return void
-     */
-    private function registerPublishing()
-    {
         if ($this->app->runningInConsole()) {
-            // Lumen lacks a config_path() helper, so we use base_path()
-            $this->publishes([
-                __DIR__.'/../config/rajaongkir-laravel.php' => base_path('config/rajaongkir-laravel.php'),
-            ], 'laravel-rajaongkir-config');
+            $this->publishes(
+                [
+                    __DIR__ . "/../config/rajaongkir-laravel.php" => config_path(
+                        "rajaongkir-laravel.php"
+                    ),
+                ],
+                "rajaongkir-laravel-config"
+            );
         }
     }
 }
