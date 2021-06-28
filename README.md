@@ -1,2 +1,2 @@
-# rajaongkir-laravel
-The wrapper rajangokir for Laravel PHP Framework
+# Raja Ongkir laravel
+The wrapper RajaOngkir for Laravel PHP Framework
