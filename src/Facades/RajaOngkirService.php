@@ -18,6 +18,6 @@ class RajaOngkirService extends Facade
 {
     protected static function getFacadeAccessor()
     {
-        return 'rajaongkir-laravel';
+        return 'rajaongkir-service';
     }
 }
