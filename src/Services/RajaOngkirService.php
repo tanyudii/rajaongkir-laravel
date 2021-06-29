@@ -5,7 +5,7 @@ namespace Tanyudii\RajaOngkirLaravel\Services;
 use Exception;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Config;
-use Tanyudii\RajaOngkirLaravel\RajaOngkirException;
+use Tanyudii\RajaOngkirLaravel\Exceptions\RajaOngkirException;
 
 class RajaOngkirService
 {

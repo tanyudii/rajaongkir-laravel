@@ -1,6 +1,6 @@
 <?php
 
-namespace Tanyudii\RajaOngkirLaravel;
+namespace Tanyudii\RajaOngkirLaravel\Exceptions;
 
 class RajaOngkirException extends \Exception
 {
